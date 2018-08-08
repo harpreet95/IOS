@@ -10,6 +10,7 @@ import UIKit
 
 class ElectricityBillViewController: UIViewController {
 
+    @IBOutlet weak var btnCalculate: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,10 @@ class ElectricityBillViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func btnCalculate(_ sender: UIButton) {
+        performSegue(withIdentifier: "nv", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

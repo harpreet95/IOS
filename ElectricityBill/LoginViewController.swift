@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var btnLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,10 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func btnLogin(_ sender: UIButton) {
+        performSegue(withIdentifier: "ShowBillCalculation", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
